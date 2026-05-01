@@ -6,7 +6,7 @@ Historical intraday market data cache for the Razor stock trading simulator. Hos
 
 ## Repository Layout
 
-This repo contains `cache_snp500.zip` (802 MB). The remaining datasets exceed GitHub's file size limits and are hosted on Google Drive — see [Downloads](#downloads) below.
+This repo contains `cache_snp500.zip` (802 MB). The remaining datasets exceed GitHub's file size limits and are hosted on Google Drive -- see [Downloads](#downloads) below.
 
 ```
 razor-cache/
@@ -32,7 +32,7 @@ razor-cache/
 
 All other datasets were moved to Google Drive due to GitHub file size constraints:
 
-> [Google Drive — Razor Cache Files](https://drive.google.com/drive/folders/1dfzLv8uZKAxCpWsHo57wPveT9RfawPGj?usp=sharing)
+> [Google Drive -- Razor Cache Files](https://drive.google.com/drive/folders/1dfzLv8uZKAxCpWsHo57wPveT9RfawPGj?usp=sharing)
 
 Each zip extracts to a flat folder of `{TICKER}_{YYYY-MM-DD}.json` files matching the schema described below.
 
@@ -45,8 +45,8 @@ Each zip extracts to a flat folder of `{TICKER}_{YYYY-MM-DD}.json` files matchin
 ```
 
 Examples:
-- `AAPL_2025-06-02.json` — Apple, June 2 2025
-- `MSFT_2024-11-15.json` — Microsoft, Nov 15 2024
+- `AAPL_2025-06-02.json` -- Apple, June 2 2025
+- `MSFT_2024-11-15.json` -- Microsoft, Nov 15 2024
 
 Files are only present for **market trading days** (NYSE calendar). Weekends, federal holidays, and early-close half-days have no file.
 
@@ -56,7 +56,7 @@ Files are only present for **market trading days** (NYSE calendar). Weekends, fe
 
 There are two schema variants. The only difference is the presence of the `meta` block.
 
-### Schema v2 (standard — all directories except `cache`)
+### Schema v2 (standard -- all directories except `cache`)
 
 ```json
 {
@@ -81,7 +81,7 @@ There are two schema variants. The only difference is the presence of the `meta`
 }
 ```
 
-### Schema v1 (legacy — `cache` directory only)
+### Schema v1 (legacy -- `cache` directory only)
 
 Identical to v2 but without the `meta` block:
 
@@ -114,7 +114,7 @@ Identical to v2 but without the `meta` block:
 | `symbol` | `string` | Ticker symbol (uppercase, e.g. `"AAPL"`) |
 | `date` | `string` | Trading date in `YYYY-MM-DD` format (local market date, US Eastern) |
 | `fetchedAt` | `string` | ISO 8601 UTC timestamp of when the data was fetched from the upstream source |
-| `meta` | `object` | *(v2 only)* Security metadata at fetch time — see below |
+| `meta` | `object` | *(v2 only)* Security metadata at fetch time -- see below |
 | `bars` | `Bar[]` | Ordered array of 1-minute OHLCV candles, earliest first |
 
 ### `meta` object (v2 only)
