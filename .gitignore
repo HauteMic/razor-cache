@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache folders (raw JSON — not tracked in git)
+cache/
+cache_apex/
+cache_djia/
+cache_ndx/
+cache_og_298/
+cache_snp500/
+
+# Zip files hosted on Google Drive (too large for GitHub)
+cache.zip
+cache_apex.zip
+cache_djia.zip
+cache_ndx.zip
+cache_og_298.zip
